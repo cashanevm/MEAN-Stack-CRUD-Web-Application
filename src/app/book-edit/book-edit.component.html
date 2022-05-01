@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>Edit Cloth</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form #bookForm="ngForm" (ngSubmit)="updateBook(book._id, book)">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input [(ngModel)]="book.isbn" class="form-control" name="isbn" required type="text">
+        </div>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input [(ngModel)]="book.title" class="form-control" name="title" required type="text">
+        </div>
+        <div class="form-group">
+          <label for="name">Brand</label>
+          <input [(ngModel)]="book.author" class="form-control" name="author" required type="text">
+        </div>
+        <div class="form-group">
+          <label for="name">Price</label>
+          <input [(ngModel)]="book.published_year" class="form-control" name="published_year" required type="number">
+        </div>
+        <div class="form-group">
+          <label for="name">Owner</label>
+          <input [(ngModel)]="book.publisher" class="form-control" name="publisher" required type="text">
+        </div>
+        <div class="form-group">
+          <button [disabled]="!bookForm.form.valid" class="btn btn-success" type="submit">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

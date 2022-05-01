@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Clothes
+    <a [routerLink]="['/book-create']" class="btn btn-default btn-lg">
+      <span aria-hidden="true" class="glyphicon glyphicon-plus"></span>
+    </a>
+  </h1>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Full Name</th>
+      <th>Brand</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let book of books">
+      <td>{{ book.title }}</td>
+      <td>{{ book.author }}</td>
+      <td><a [routerLink]="['/book-details', book._id]" class="btn btn-default btn-lg">
+        <span aria-hidden="true" class="glyphicon glyphicon-plus">Show Detail</span>
+      </a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
